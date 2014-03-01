@@ -1,23 +1,23 @@
 {
-  "name": "universe_builder",
+  "name": "universe-builder",
   "version": "0.0.1",
-  "description": "my first idle game",
+  "description": "A idle game project in development",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/drgustavo/universe-builder"
+    "url": "https://github.com/Ghostavio/universe-builder/"
   },
   "author": {
     "name": "Gustavo",
     "url": "http://codenamegus.com"
   },
   "bugs": {
-    "url": "https://bitbucket.org/drgustavo/universe-builder/issues"
+    "url": "https://github.com/Ghostavio/universe-builder/issues"
   },
-  "homepage": "http://codenamegus.com/universe-builder",
+  "homepage": "http://universebuilder.codenamegus.com/",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-compass": "~0.7.0",
