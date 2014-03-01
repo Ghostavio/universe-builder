@@ -64,8 +64,8 @@ server/conf/local_settings.py
 *.css.map
 *.css.patch
 
-# Compiled CSS
-assets/css/
+# Compiled CSS -- need to sort this out later
+# assets/css/
 
 # Test Database
 server/db.sqlite3
