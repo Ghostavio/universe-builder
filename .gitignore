@@ -1,0 +1,75 @@
+# Python
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+cover
+nosetests.xml
+js-test-results.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+.DS_Store
+
+# IDEs
+.idea
+
+# Vagrant
+.vagrant
+vm/download_cache/
+
+#### Project ####
+
+# Logs
+logs/*.log
+
+# Cache folders and binary folders
+node_modules/
+.sass-cache/
+.grunt/
+.tmp/
+
+# Local settings
+server/conf/local_settings.py
+
+# Ignored Front-end
+*.css.map
+*.css.patch
+
+# Compiled CSS
+assets/css/
+
+# Test Database
+server/db.sqlite3
+
+# Gems
+Gemfile.lock
+.bundle

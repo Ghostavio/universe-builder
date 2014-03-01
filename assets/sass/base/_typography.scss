@@ -1,0 +1,149 @@
+// ###### EXTRA LIGHT = 200 ###### //
+@include font-face(
+    "SourceSansPro",
+    font-files(
+        "SourceSansPro-ExtraLight-webfont.woff", woff,
+        "SourceSansPro-ExtraLight-webfont.ttf", ttf,
+        "SourceSansPro-ExtraLight-webfont.svg", svg),
+        "SourceSansPro-ExtraLight-webfont.eot",
+        200, // font-weight
+        normal  // font-style
+);
+
+// ###### REGULAR = 400 ###### //
+@include font-face(
+    "SourceSansPro",
+    font-files(
+        "SourceSansPro-Regular-webfont.woff", woff,
+        "SourceSansPro-Regular-webfont.ttf", ttf,
+        "SourceSansPro-Regular-webfont.svg", svg),
+        "SourceSansPro-Regular-webfont.eot",
+        400, // font-weight
+        normal  // font-style
+);
+
+// ###### SEMIBOLD = 600 ###### //
+@include font-face(
+    "SourceSansPro",
+    font-files(
+        "SourceSansPro-Semibold-webfont.woff", woff,
+        "SourceSansPro-Semibold-webfont.ttf", ttf,
+        "SourceSansPro-Semibold-webfont.svg", svg),
+        "SourceSansPro-Semibold-webfont.eot",
+        600, // font-weight
+        normal  // font-style
+);
+
+// ###### BOLD = 700 ###### //
+@include font-face(
+    "SourceSansPro",
+    font-files(
+        "SourceSansPro-Bold-webfont.woff", woff,
+        "SourceSansPro-Bold-webfont.ttf", ttf,
+        "SourceSansPro-Bold-webfont.svg", svg),
+        "SourceSansPro-Bold-webfont.eot",
+        700, // font-weight
+        normal  // font-style
+);
+
+@include font-face(
+    "Lobster",
+    font-files(
+        "Lobster_1.3-webfont.woff", woff,
+        "Lobster_1.3-webfont.ttf", ttf,
+        "Lobster_1.3-webfont.svg", svg),
+        "Lobster_1.3-webfont.eot",
+        400, // font-weight
+        normal  // font-style
+);
+
+@include font-face(
+    "SSPika",
+    font-files(
+        "ss-pika.woff", woff,
+        "ss-pika.ttf", ttf,
+        "ss-pika.svg", svg),
+        "ss-pika.eot",
+        400, // font-weight
+        normal  // font-style
+);
+
+@include font-face(
+    "SSSocial",
+    font-files(
+        "ss-social-regular.woff", woff,
+        "ss-social-regular.ttf", ttf,
+        "ss-social-regular.svg", svg),
+        "ss-social-regular.eot",
+        400, // font-weight
+        normal  // font-style
+);
+
+@mixin SSPika {
+    font-family: 'SSPika';
+    -webkit-font-smoothing: antialiased;
+}
+
+.ss-icon {
+    @include SSPika();
+}
+
+@mixin lobster {
+    font-family: Lobster, SourceSansPro, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+    white-space: nowrap;
+    /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin default-font-family {
+    font-family: SourceSansPro, Helvetica, Arial, sans-serif;
+}
+
+@mixin baskerville-font-family {
+    font-family: 'Libre Baskerville', serif;
+}
+
+@mixin extra-light {
+    font-weight: 200;
+}
+
+@mixin non-bold {
+    font-weight: 400;
+}
+
+@mixin semi-bold {
+    font-weight: 600;
+}
+
+@mixin bold {
+    font-weight: 700;
+}
+
+// ---------- Headings ----------
+h1, h2, h3 {
+    @include full-width;
+    text-align: center;
+}
+
+h1 {
+    @include adjust-font-size-to(24px);
+    @include extra-light;
+}
+
+h2 {
+    @include adjust-font-size-to(16px);
+    @include semi-bold;
+}
+
+h3 {
+    @include adjust-font-size-to(16px);
+    @include non-bold;
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- 0111001101110101011000010010000001101101011000010110010100100000011000010111000101110101011001010110110001100001001000000110011101101111011100100110010001100001 -->
+    <meta charset="UTF-8">
+    <title>Universe Builder</title>
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+
+    <!-- {{! iOS Specific }} -->
+    <meta name="apple-mobile-web-app-title" content="Universe Builder">
+
+    <!-- {{! IE10 Fix Viewport fix http://trentwalton.com/2013/01/16/windows-phone-8-viewport-fix/ }} -->
+    <script>
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+    </script>
+
+    <!-- {{! Modernizr }} -->
+    <script src="assets/js/libs/modernizr.js"></script>
+
+    <link rel="author" href="humans.txt" />
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-42411493-2', 'codenamegus.com');
+      ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <script src="assets/js/libs/jquery-2.0.3.js"></script>
+    <script src="assets/js/libs/retina-1.1.0.min.js"></script>
+    <script src="assets/js/libs/handlebars-1.1.2.js"></script>
+    <script src="assets/js/libs/ember.js"></script>
+    <script src="assets/js/libs/ember-data.js"></script>
+    <script src="ember/localstorage_adapter.js"></script>
+    <script src="ember/app.js"></script>
+    <script src="ember/router.js"></script>
+    <script src="ember/routes/GameRoute.js"></script>
+    <script src="ember/controller/GameController.js"></script>
+    <script src="ember/views/IndexView.js"></script>
+    <script src="ember/templates.js"></script>
+    <script src="ember/models/storage.js"></script>
+</body>
+</html>

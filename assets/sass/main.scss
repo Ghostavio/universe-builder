@@ -1,0 +1,13 @@
+/*
+    The main.scss file is reponsible to load all of the other minor scss files.
+    Each and every folder has a file with the same name, that handles importing
+    all of the the files inside it.
+*/
+
+@import "compass",
+        "compass/reset",
+        "breakpoint",
+        "susy",
+        // "components/all",
+        // "game/all",
+        "base/all";

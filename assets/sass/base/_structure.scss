@@ -1,0 +1,227 @@
+/* structure.scss */
+
+// Susy Config
+
+$susy: (
+  container: 100%,
+  columns: 12,
+  gutters: 1/4
+);
+
+// ---------------------------------------------------------------------------
+// Vertical Rhythm
+
+$base-font-size: 14px;
+$base-line-height: 24px;
+$em-base: 1.5em;
+$grid-background-baseline-height: 24px;
+@include establish-baseline;
+
+// ---------------------------------------------------------------------------
+// Structure
+
+@include border-box-sizing;
+
+* {
+    @include default-font-family;
+    @include non-bold;
+    color: $text-color;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    @include default-font-family;
+    @include non-bold;
+    color: $text-color;
+    background-color: $bg-body;
+    height: 100%;
+}
+
+@include layout($susy);
+
+.container {
+    //@include container(show);
+}
+
+.debug {
+    @include container(show);
+}
+
+.main {
+    @include full(of susy-get(columns));
+}
+
+.clear {
+    clear: both;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+    color: inherit;
+}
+
+// For this to work you need to pass both a width and height
+.super-cool-center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.roundfy {
+    border-radius: 50%;
+}
+
+.no-opacity {
+    opacity: 0;
+}
+
+@keyframes glowing {
+    from {
+        background-color: $white;
+        box-shadow: 0 0 9px $very-light-gray;
+    }
+    50% {
+        background-color: darken($white, 5%);
+        box-shadow: 0 0 18px $light-gray;
+    }
+    to {
+        background-color: darken($white, 10%);
+        box-shadow: 0 0 9px darken($light-gray, 5%);
+    }
+}
+
+.glowing {
+    animation-name: glowing;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.big-bang {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    transition: all 1s;
+}
+
+.first-title {
+    color: $white;
+    height: 40%;
+    @include adjust-font-size-to(24px);
+}
+
+.eita {
+    width: 100%;
+    height: 25px;
+    color: $white;
+    text-align: center;
+    @include adjust-font-size-to(24px);
+}
+
+.explosion {
+    background-color: $white;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+}
+
+.e-agora-vai {
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    display: block;
+    box-shadow: 0 0 3px $light-gray;
+}
+
+@for $i from 1 through 25 {
+    @keyframes anim-top-left-#{$i} {
+        from {
+            top: 50%;
+            left: 50%;
+        }
+        to {
+            top: random(1000)+px;
+            left: random(1980)+px;
+            width: 2px;
+            height: 2px;
+        }
+    }
+    div.e-top-left{
+        &:nth-child(#{$i}){
+            left: $i * 10px;
+            animation-name: anim-top-left-#{$i};
+        }
+    }
+}
+@for $i from 1 through 25 {
+    @keyframes anim-top-right-#{$i} {
+        from {
+            top: 50%;
+            right: 50%;
+        }
+        to {
+            top: random(1120)+px;
+            right: random(1850)+px;
+            width: 2px;
+            height: 2px;
+        }
+    }
+    div.e-top-right{
+        &:nth-child(#{$i}){
+            right: $i * 10px;
+            animation-name: anim-top-right-#{$i};
+        }
+    }
+}
+@for $i from 1 through 25 {
+    @keyframes anim-bottom-right-#{$i} {
+        from {
+            bottom: 50%;
+            right: 50%;
+        }
+        to {
+            bottom: random(1100)+px;
+            right: random(1800)+px;
+            width: 2px;
+            height: 2px;
+        }
+    }
+    div.e-bottom-right{
+        &:nth-child(#{$i}){
+            right: $i * 10px;
+            animation-name: anim-bottom-right-#{$i};
+        }
+    }
+}
+@for $i from 1 through 25 {
+    @keyframes anim-bottom-left-#{$i} {
+        from {
+            bottom: 50%;
+            left: 50%;
+        }
+        to {
+            bottom: random(1100)+px;
+            left: random(2000)+px;
+            width: 2px;
+            height: 2px;
+        }
+    }
+    div.e-bottom-left{
+        &:nth-child(#{$i}){
+            left: $i * 10px;
+            animation-name: anim-bottom-left-#{$i};
+        }
+    }
+}
