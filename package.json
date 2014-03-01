@@ -35,7 +35,6 @@
     "requirejs": "~2.1.9",
     "grunt-cli": "~0.1.11",
     "grunt-karma": "~0.6.2",
-    "dyson-generators": "~0.1.1",
     "lodash": "~2.4.1",
     "moment": "~2.5.0"
   }
