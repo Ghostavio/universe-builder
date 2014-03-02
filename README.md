@@ -2,6 +2,7 @@ universe-builder
 ================
 
 A idle game project in development.
+[http://universebuilder.codenamegus.com/](http://universebuilder.codenamegus.com/ "Universe Builder")
 
 # Front-end instructions
 
