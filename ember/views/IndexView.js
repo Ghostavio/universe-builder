@@ -1,7 +1,7 @@
 App.introduction = Ember.View.extend({
     tagName: 'h1',
     classNames: ['super-cool-center', 'first-title'],
-    introduction: App.Game.opt.introduction,
+    introduction: App.Gamer.opt.introduction,
 });
 
 App.bigBang = Ember.View.extend({
@@ -17,7 +17,6 @@ App.bigBang = Ember.View.extend({
         $('.first-title').fadeOut();
         this.$().removeClass('roundfy glowing');
         $('body').css('overflow','hidden');
-        this.get('controller').transitionToRoute('game');
         this.get('controller').send('startGame', true);
     }
 });

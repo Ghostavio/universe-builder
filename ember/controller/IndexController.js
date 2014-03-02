@@ -1,16 +1,13 @@
 App.IndexController = Ember.Controller.extend({
-  actions: {
+    actions: {
         startGame: function(start){
-            App.Game.opt.gameStarted = start;
+            App.Gamer.opt.gameStarted = start;
             // create a record and save it to the store
             if (this.get('model.length') === 0) {
-                var newGame = this.store.createRecord('storage', {atoms: 0, gameStarted: true});
+                var newGame = this.store.createRecord('storage', {id: 1, atoms: 0, gameStarted: true});
                 newGame.save();
             }
-            // this will tell Ember-Data to save/persist the new record
-            //game.save();
-            // then transition to the current user
-            //this.transitionToRoute('job', job);
+            this.transitionToRoute('game');
         }
     }
 });

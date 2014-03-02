@@ -1,5 +1,5 @@
 App.GameRoute = Ember.Route.extend({
   model: function() {
-    return this.store.find('storage');
+    return this.store.find('storage', 1);
   }
 });

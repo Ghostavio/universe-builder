@@ -3,7 +3,7 @@
 */
 window.App = Ember.Application.create();
 
-App.Game = Ember.ArrayProxy.create({
+App.Gamer = Ember.ArrayProxy.create({
     opt: {
         version: 0.1,
         gameStarted: false,
@@ -14,6 +14,7 @@ App.Game = Ember.ArrayProxy.create({
         quantityPerSecond: 0
     },
     energyButton: {
-        quantityPerClick: 0.1
+        buttonName: "Energy",
+        quantityPerClick: 1
     }
 });
