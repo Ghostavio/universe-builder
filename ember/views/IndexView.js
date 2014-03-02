@@ -17,8 +17,7 @@ App.bigBang = Ember.View.extend({
         $('.first-title').fadeOut();
         this.$().removeClass('roundfy glowing');
         $('body').css('overflow','hidden');
-        App.Game.opt.gameStarted = true;
-        teste = this.get('controller');        
         this.get('controller').transitionToRoute('game');
+        this.get('controller').send('startGame', true);
     }
 });

@@ -1,4 +1,4 @@
-App.JobsRoute = Ember.Route.extend({
+App.GameRoute = Ember.Route.extend({
   model: function() {
     return this.store.find('storage');
   }

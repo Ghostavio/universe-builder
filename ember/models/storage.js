@@ -1,4 +1,4 @@
-App.storage = DS.Model.extend({
+App.Storage = DS.Model.extend({
   atoms       : DS.attr('string'),
   gameStarted : DS.attr('boolean')
 });
