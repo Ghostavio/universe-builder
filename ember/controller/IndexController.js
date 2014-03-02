@@ -14,6 +14,7 @@ App.IndexController = Ember.Controller.extend({
                 });
                 newGame.save();
             }
+            console.image('http://universebuilder.codenamegus.com/assets/img/bigbang.gif');
             this.transitionToRoute('game');
         }
     }
